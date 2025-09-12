@@ -60,8 +60,7 @@ header nav li {
     font-size: 20px;
     align-items: center;
     margin-top: 250px;
-    text-align: center;
-    padding-left: 30px;
+    padding: 10px;
 }
 
 a {
@@ -72,6 +71,8 @@ a {
 .imge {
     background: url(img3.jpg);
     justify-content: center;
+    justify-content: space-evenly;
+    display: flex;
 }
 
 .image img {
@@ -79,6 +80,7 @@ a {
     height: 300px;
     border-radius: 50%;
     margin-top: 150px;
+    animation: swap 0.5s forwards linear reverse;
 }
 
 section {
@@ -103,8 +105,9 @@ section {
     font-weight: bolder;
     float: right;
     padding: 30px;
-    margin-left: 15%;
+    margin-left: -700px;
     margin-top: 50px;
+    animation: swap 0.5s forwards linear;
 }
 
 .b1 {
@@ -230,4 +233,41 @@ textarea {
     margin: auto;
     margin-top: 200px;
     margin-left: 35%;
+}
+
+.pop-up {
+    margin-top: -800px;
+    animation: pop 0.5s ease forwards;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(900px);
+    }
+    100% {
+        transform: translateY(750px);
+        opacity: 1;
+    }
+}
+
+.what-i-do:hover {
+    position: relative;
+    left: 200px;
+}
+
+.myself {
+    margin-left: -1000px;
+    width: 800px;
+    animation: swap 0.5s forwards linear;
+}
+
+@keyframes swap {
+    0% {}
+    100% {
+        transform: translateX(1000px);
+        opacity: 1;
+    }
 }
